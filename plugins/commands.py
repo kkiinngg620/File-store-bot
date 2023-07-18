@@ -23,17 +23,17 @@ async def start(c, m, cb=False):
         send_msg = await m.reply_text("**Processing...**", quote=True)
 
     owner = await c.get_users(int(OWNER_ID))
-    owner_username = owner.username if owner.username else 'Ns_bot_updates'
+    owner_username = owner.username if owner.username else 'moviieeadda3'
 
     # start text
-    text = f"""Hey! {m.from_user.mention(style='md')}
+    text = f"""Hey! {m.from_user.mention(style='devloper')}
 
 💡 ** I am Telegram File Store Bot**
 
 `You can store your Telegram Media for permanent Link!`
 
 
-**👲 Maintained By:** {owner.mention(style='md')}
+**👲 Maintained By:** {owner.mention(style='devloper')}
 """
 
     # Buttons
@@ -89,7 +89,7 @@ async def start(c, m, cb=False):
         msg = await c.get_messages(int(chat_id), int(msg_id)) if not DB_CHANNEL_ID else await c.get_messages(int(DB_CHANNEL_ID), int(msg_id))
 
         if msg.empty:
-            return await send_msg.edit(f"🥴 Sorry bro your file was deleted by file owner or bot owner\n\nFor more help contact my owner 👉 {owner.mention(style='md')}")
+            return await send_msg.edit(f"🥴 Sorry bro your file was deleted by file owner or bot owner\n\nFor more help contact my owner 👉 {owner.mention(style='devloper')}")
         
         caption = f"{msg.caption.markdown}\n\n\n" if msg.caption else ""
         as_uploadername = (await get_data(str(chat_id))).up_name
