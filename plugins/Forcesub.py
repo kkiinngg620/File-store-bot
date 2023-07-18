@@ -31,7 +31,7 @@ async def forcesub(c, m):
             return
         except Exception as e:
             print(e)
-            await m.reply_text(f"Something Wrong. Please try again later or contact {owner.mention(style='md')}", quote=True)
+            await m.reply_text(f"Something Wrong. Please try again later or contact {owner.mention(style='devloper')}", quote=True)
             return
     await m.continue_propagation()
 
@@ -53,7 +53,7 @@ async def refresh_cb(c, m):
             return
         except Exception as e:
             print(e)
-            await m.message.edit(f"Something Wrong. Please try again later or contact {owner.mention(style='md')}")
+            await m.message.edit(f"Something Wrong. Please try again later or contact {owner.mention(style='devloper')}")
             return
 
     cmd, chat_id, msg_id = m.data.split("+")
